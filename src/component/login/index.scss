@@ -1,0 +1,121 @@
+.login-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1b1a1a;
+    font-family: Arial, sans-serif;
+    color: #333;
+  
+    .image-container {
+      img {
+        height: 80vh;
+      }
+    }
+  
+    .login-form {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      width: 80vh;
+      height: 80vh;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      gap: 10vh;
+      justify-content: center;
+      align-items: center;
+  
+      .login-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+  
+        .email-input,
+        .password-input {
+          padding-left: 2vh;
+          background-color: #171717;
+          width: 40vh;
+          height: 4vh;
+          border-radius: 10px;
+          cursor: pointer;
+          border: none;
+          color: white;
+          transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  
+          &:hover {
+            border-color: #ffffff;
+            box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.8);
+          }
+        }
+  
+        p {
+          color: white;
+        }
+  
+        .password {
+          display: flex;
+          flex-direction: row; // Organiza o input e o botão lado a lado
+          align-items: center; // Alinha verticalmente os itens
+          gap: 10px; // Adiciona um espaço entre o input e o botão
+  
+          .password-input {
+            background-color: #171717;
+            width: 40vh;
+            height: 4vh;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            padding-left: 2vh;
+  
+            &:hover {
+              border-color: #ffffff;
+              box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.8);
+            }
+          }
+  
+          .mostrar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+  
+            .Mostrar-senha {
+              background: none;
+              border: none;
+              cursor: pointer;
+              color: white;
+              font-size: 1.5vh;
+              padding: 0;
+  
+              &:hover {
+                color: #ccc;
+              }
+            }
+          }
+        }
+      }
+  
+      .login-button {
+        background-color: white;
+        width: 40vh;
+        height: 6vh;
+        border-radius: 50px;
+        font-size: 2vh;
+        transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  
+        &:hover {
+          border-color: #ffffff;
+          box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.8);
+        }
+      }
+  
+      h1 {
+        color: white;
+        font-size: 4vh;
+      }
+    }
+  }
+  
