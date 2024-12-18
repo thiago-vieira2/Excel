@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import Fundologin from '../../assets/img/fundo-login.svg'
 import './index.scss'
+import { useNavigate } from 'react-router-dom'; // Importe o useNavigate
 
 export default function Login() {
+
+    const [mostrar, setMostrar] = useState(true)
+
+    function MostrarSenha () {
+        setMostrar((prevState) => !prevState)
+    }
+
+
     return (
        
             <div className="login-container">
@@ -20,13 +30,13 @@ export default function Login() {
 
                         <div className="password">
 
-                        <p className='password-txt'>Senha</p>
+                             <p className='password-txt'>Senha</p>
 
-                        <input className="password-input" type="password" name="" id="" />
+                             <input className="password-input" type={mostrar ?  "password": 'text'} name="" id="" />
 
-                        <div className="mostrar">
-                            <button className='Mostrar-senha'>olho</button>
-                        </div>
+                            
+                             <button className='Mostrar-senha' onClick={MostrarSenha}>{mostrar? "Mostrar Senha" : "Esconder Senha"}</button>
+                        
 
                         </div>
                    
@@ -34,7 +44,7 @@ export default function Login() {
                     </div>
 
 
-                    <button className="login-button">Entrar</button>
+                    <button className="login-button" >Entrar</button>
 
                 </div>
 
